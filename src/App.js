@@ -12,10 +12,10 @@ function App() {
       })
         .then((data)=>{
           var cookies=new Cookies();
-          cookies.set('myCat', 'Pacman', { path: '/' });
-          console.log('@@@@COOKIES VALUE====>'+cookies.get('myCat'));
           console.log('@@==> : '+JSON.stringify(data['data']['o']['id']));
           setData(data['data']['o']['id']);
+          cookies.set('myCat', data['data']['o']['id'], { path: '/' });
+          console.log('@@@@COOKIES VALUE====>'+cookies.get('myCat'));
         }).catch((error)=>{
           console.log(error);
         });
