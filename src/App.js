@@ -12,10 +12,10 @@ function App() {
       })
         .then((data)=>{
           var cookies=new Cookies();
-          console.log('@@==> : '+JSON.stringify(data['data']['o']['id']));
-          setData(data['data']['o']['id']);
           cookies.set('u-val', data['data']['o']['id'], { path: '/' });
-          console.log('@@@@COOKIES VALUE====>'+cookies.get('u-val'));
+          setData(cookies.get('u-val'));
+          //console.log('@@==> : '+JSON.stringify(data['data']['o']['id']));
+          //console.log('@@@@COOKIES VALUE====>'+cookies.get('u-val'));
         }).catch((error)=>{
           console.log(error);
         });
