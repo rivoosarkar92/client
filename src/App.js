@@ -13,6 +13,7 @@ function App() {
         .then((data)=>{
           var cookies=new Cookies();
           cookies.set('u-val', data['data']['o']['id'], { path: '/' });
+          alert('hi'+cookies.get('u-val'));
           setData(cookies.get('u-val'));
           //console.log('@@==> : '+JSON.stringify(data['data']['o']['id']));
           //console.log('@@@@COOKIES VALUE====>'+cookies.get('u-val'));
