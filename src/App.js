@@ -14,8 +14,8 @@ function App() {
           var cookies=new Cookies();
           console.log('@@==> : '+JSON.stringify(data['data']['o']['id']));
           setData(data['data']['o']['id']);
-          cookies.set('myCat', data['data']['o']['id'], { path: '/' });
-          console.log('@@@@COOKIES VALUE====>'+cookies.get('myCat'));
+          cookies.set('u-val', data['data']['o']['id'], { path: '/' });
+          console.log('@@@@COOKIES VALUE====>'+cookies.get('u-val'));
         }).catch((error)=>{
           console.log(error);
         });
