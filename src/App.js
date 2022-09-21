@@ -20,7 +20,7 @@ function App() {
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
-        <p className="custom-para">{(!dataval) ? "Loading mojo" : dataval}</p>
+        <p className="custom-para">{(!dataval) ? "Only changed in src" : dataval}</p>
       </header>
     </div>
   );
