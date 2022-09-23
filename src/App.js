@@ -5,7 +5,7 @@ import './App.css';
 import {Button } from '@salesforce/design-system-react';
 
 //import {GlobalNavigationBar, GlobalNavigationBarRegion,GlobalNavigationBarLink}  from '@salesforce/design-system-react/';
-class App extends React.Component{
+class App extends Component{
    dataval;
   /*const [dataval, setData] = React.useState(null);
   React.useEffect(()=>{
