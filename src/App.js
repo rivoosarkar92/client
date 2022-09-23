@@ -22,7 +22,7 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <GlobalNavigationBar>
+        <GlobalNavigationBar static displayName = "GlobalNavigationBarExample">
           region here
         </GlobalNavigationBar>
         <img src={logo} className="App-logo" alt="logo" />
