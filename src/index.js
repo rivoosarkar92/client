@@ -9,16 +9,16 @@ function Eello(props){
   return (
         <div>
           <h1>Hi</h1>
-          <pre>This is a Mobile app where :
-                1.) Salesforce acts as Backend.
-                2.) Node.js as middleware and
-                3.) React as front end.
-                factoids web url for this app
-                is : https://astounding-peony-600787.netlify.app/
-                and also if you have installed
-                the .apk file then you will see
-                the app version
-          </pre>
+          <p>This is a Mobile app where :<br/>
+                1.) Salesforce acts as Backend.<br/>
+                2.) Node.js as middleware and<br/>
+                3.) React as front end.<br/>
+                factoids web url for this app<br/>
+                is : https://astounding-peony-600787.netlify.app/<br/>
+                and also if you have installed<br/>
+                the .apk file then you will see<br/>
+                the app version.<br/>
+          </p>
         </div>
     );
 }
