@@ -10,14 +10,25 @@ class App extends Component{
   dofunct=()=>{
     alert('clicked me');
   }
+  
   render (){
-    return(
-      fetch('https://first-react-server-rs.herokuapp.com/my-custom-domain').then((res)=>{
-        return res.json()
-      }).then((data)=>{
+    fetch('https://first-react-server-rs.herokuapp.com/my-custom-domain')
+      .then((res)=>{
+        return res.json();
+      })
+        .then((data)=>{
+        console.log('response : '+JSON.stringify(data));
           var cookies=new Cookies();
           cookies.set('u-val', data['data']['o']['id'], { path: '/' });
           this.dataval=cookies.get('u-val');
+        }).catch((error)=>{
+          console.log(error);
+        }).finally(()=>{
+          
+        });
+        var cookien=new Cookies();
+        console.log('@@@==> : '+cookien.get('u-val'));
+    return(
           <div className="App slds-card">
           <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
@@ -25,9 +36,6 @@ class App extends Component{
           <Button onClick={this.dofunct} className="App-button" label="Go!" variant="outline-brand"/>
         </header>
     </div>
-      }).catch((err)=>{
-        console.log('ERROR ==> : '+err);
-      })
     );
 }
 }
