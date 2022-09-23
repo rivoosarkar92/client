@@ -8,9 +8,21 @@ import {Button } from '@salesforce/design-system-react';
 class App extends Component{
   dataval;
   dofunct=()=>{
+    fetch('https://first-react-server-rs.herokuapp.com/get-user-data')
+      .then((res)=>{
+        console.log('RESPONSE : '+JSON.stringify(res));
+        alert('First button res : '+JSON.stringify(res));
+        return res.json();
+      })
+        .then((data)=>{
+          console.log('SECOND THEN : '+JSON.stringify(data));
+          alert('Correct response received : '+JSON.stringify(data));
+        }).catch((err)=>{
+          console.log('Error from button : '+err);
+          alert(err);
+        });
     alert(this.dataval);
   }
-  
   render (){
     fetch('https://first-react-server-rs.herokuapp.com/my-custom-domain')
       .then((res)=>{
