@@ -24,6 +24,7 @@ function App() {
     <div className="App">
       <header className="App-header">
         <GlobalNavigationBar>
+          nAVIGATION HERE
         </GlobalNavigationBar>
         <img src={logo} className="App-logo" alt="logo" />
         <p className="custom-para">{(!dataval) ? "Only changed in src" : dataval}</p>
