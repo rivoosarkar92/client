@@ -11,8 +11,8 @@ function Eello(props){
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
     <Eello/>
+    <App />
     <center>
     <Button label="Go!" variant="outline-brand"/>
     </center>
