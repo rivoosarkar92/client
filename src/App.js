@@ -13,7 +13,7 @@ function App() {
       })
         .then((data)=>{
           var cookies=new Cookies();
-          cookies.set('u-val', data['data']['o']['id']+' is the user id from salesforce this indicates that this react app through using a node js server ha accessed user id from salesforce', { path: '/' });
+          cookies.set('u-val', data['data']['o']['id'], { path: '/' });
           //alert('hi'+cookies.get('u-val'));
           setData(cookies.get('u-val'));
           //console.log('@@==> : '+JSON.stringify(data['data']['o']['id']));
