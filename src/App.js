@@ -20,14 +20,13 @@ class App extends Component{
         console.log('response : '+JSON.stringify(data));
           var cookies=new Cookies();
           cookies.set('u-val', data['data']['o']['id'], { path: '/' });
-          this.dataval=cookies.get('u-val');
         }).catch((error)=>{
           console.log(error);
         }).finally(()=>{
-          
         });
         var cookien=new Cookies();
         console.log('@@@==> : '+cookien.get('u-val'));
+        this.dataval=cookien.get('u-val');
     return(
           <div className="App slds-card">
           <header className="App-header">
