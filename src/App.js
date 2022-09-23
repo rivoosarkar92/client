@@ -13,7 +13,7 @@ class App extends Component{
         return res.json();
       })
         .then((data)=>{
-          console.log('SECOND THEN : '+JSON.stringify(data));
+          console.log('SECOND THEN : '+data['res']);
         }).catch((err)=>{
           console.log('Error from button : '+err);
         });
