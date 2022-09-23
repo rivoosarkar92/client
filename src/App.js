@@ -3,7 +3,7 @@ import Cookies from 'universal-cookie';
 import logo from './drib_blink_bot.gif';
 import './App.css';
 import {Button } from '@salesforce/design-system-react';
-import {GlobalNavigationBar, GlobalNavigationBarRegion,GlobalNavigationBarLink, Modal}  from '@salesforce/design-system-react/';
+import {GlobalNavigationBar, GlobalNavigationBarRegion,GlobalNavigationBarLink}  from '@salesforce/design-system-react/';
 const leadSourceOptions = [
 	{ id: 1, label: 'Third Party Program', value: 'A0' },
 	{ id: 2, label: 'Cold Call', value: 'B0' },
