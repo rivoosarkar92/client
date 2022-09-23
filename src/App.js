@@ -42,6 +42,7 @@ class App extends Component{
     <div className="App slds-card">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
+        {this.dataval}
         <p className="custom-para">{(!this.dataval) ? "Only changed in src" : this.dataval}</p>
         <Button onClick={this.dofunct} className="App-button" label="Go!" variant="outline-brand"/>
       </header>
