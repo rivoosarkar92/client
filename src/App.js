@@ -10,20 +10,13 @@ class App extends Component{
   dofunct=()=>{
     alert('clicked me');
   }
+  async callmethod(){
+    var ret=await fetch('https://first-react-server-rs.herokuapp.com/my-custom-domain')
+      return ret;
+  }
   render (){
-    fetch('https://first-react-server-rs.herokuapp.com/my-custom-domain')
-      .then((res)=>{
-        return res.json();
-      })
-        .then((data)=>{
-        console.log('response : '+JSON.stringify(data));
-          var cookies=new Cookies();
-          cookies.set('u-val', data['data']['o']['id'], { path: '/' });
-          this.dataval=cookies.get('u-val');
-        }).catch((error)=>{
-          console.log(error);
-        });
-        console.log('@@@DATA VAL ==> : '+this.dataval);
+    var pro=this.callmethod();
+    console.log('RES : '+JSON.stringify(pro));
     return(
     <div className="App slds-card">
       <header className="App-header">
