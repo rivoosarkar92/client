@@ -14,6 +14,7 @@ class App extends Component{
       })
       .then((data)=>{
           var cookies=new Cookies();
+          console.log(JSON.stringify(data));
           cookies.set('res', data['res'], { path: '/' });
         })
         .catch((err)=>{
