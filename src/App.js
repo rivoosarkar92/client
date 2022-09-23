@@ -26,7 +26,7 @@ class App extends Component{
         });
       }
       else{
-        window.confirm('Response from Node.js : '+storedCookie.get('res'));
+        window.confirm('Response from Cookie jar : '+storedCookie.get('res'));
       }
   }
   render (){
