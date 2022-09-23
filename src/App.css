@@ -17,11 +17,11 @@
 */
 .App-button {
   width: 50%;
-  height :10vh;
+  height :5vh;
   color:white;
   background-color: aquamarine;
   border: none!important;
-  border-radius: 15%;
+  border-radius: 1%;
 }
 .App-header {
   background-color: white;
