@@ -12,10 +12,15 @@ class App extends Component{
       .then((res)=>{
         return res.json();
       })
-        .then((data)=>{
-          console.log('SECOND THEN : '+data['res']);
-        }).catch((err)=>{
+      .then((data)=>{
+          var cookies=new Cookies();
+          cookies.set('res', data['res'], { path: '/' });
+        })
+        .catch((err)=>{
           console.log('Error from button : '+err);
+        }).finally(()=>{
+          var cookiefinally= new Cookies();
+          console.log('@@@@ finally block cookie : '+cookiefinally.get('res'));
         });
   }
   render (){
