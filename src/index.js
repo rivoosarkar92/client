@@ -11,10 +11,10 @@ function Eello(props){
           <h1>Hi</h1>
           <p>This is a Mobile app where :<br/>
                 1.) Salesforce acts as Backend.<br/>
-                2.) Node.js as middleware and<br/>
+                2.) Node.js as middleware.<br/>
                 3.) React as front end.<br/>
                 factoids web url for this app<br/>
-                is : https://astounding-peony-600787.netlify.app/<br/>
+                is : <a href="https://astounding-peony-600787.netlify.app/" target="_blank" rel="noopener noreferrer">here</a><br/>
                 and also if you have installed<br/>
                 the .apk file then you will see<br/>
                 the app version.<br/>
