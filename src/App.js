@@ -24,6 +24,7 @@ class App extends Component{
         }).finally(()=>{
         });
         var cookien=new Cookies();
+        alert(cookien.get('u-val'));
         this.dataval=cookien.get('u-val');
     return(
           <div className="App slds-card">
