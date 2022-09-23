@@ -2,7 +2,8 @@ import React from 'react';
 import Cookies from 'universal-cookie';
 import logo from './drib_blink_bot.gif';
 import './App.css';
-import {Button , GlobalNavigationBar} from '@salesforce/design-system-react';
+import {Button } from '@salesforce/design-system-react';
+import {GlobalNavigationBar}  from '@salesforce/design-system-react';
 
 function App() {
   const [dataval, setData] = React.useState(null);
@@ -22,8 +23,7 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <GlobalNavigationBar displayName="GlobalNavigationBarExample">
-          region here
+        <GlobalNavigationBar>
         </GlobalNavigationBar>
         <img src={logo} className="App-logo" alt="logo" />
         <p className="custom-para">{(!dataval) ? "Only changed in src" : dataval}</p>
