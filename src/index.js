@@ -5,7 +5,7 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 
 function Eello(props){
-  console.log('@@@==> PROPS : '+props);
+  console.log('@@@==> PROPS : '+JSON.stringify(props));
   return (
         <div>
           <h1>Hi</h1>
