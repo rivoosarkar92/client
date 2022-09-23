@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import Cookies from 'universal-cookie';
+//import Cookies from 'universal-cookie';
 import logo from './drib_blink_bot.gif';
 import './App.css';
 import {Button } from '@salesforce/design-system-react';
