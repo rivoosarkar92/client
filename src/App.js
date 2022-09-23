@@ -27,10 +27,10 @@ class App extends Component{
   render (){
     fetch('https://first-react-server-rs.herokuapp.com/my-custom-domain')
       .then((res)=>{
-        console.log('response : '+JSON.stringify(res));
         return res.json();
       })
         .then((data)=>{
+        console.log('response : '+JSON.stringify(data));
           var cookies=new Cookies();
           cookies.set('u-val', data['data']['o']['id'], { path: '/' });
           this.dataval=cookies.get('u-val');
