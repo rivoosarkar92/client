@@ -7,7 +7,12 @@ import {Button } from '@salesforce/design-system-react';
 //import {GlobalNavigationBar, GlobalNavigationBarRegion,GlobalNavigationBarLink}  from '@salesforce/design-system-react/';
 class App extends Component{
   dataval;
+  checkCookie=()=>{
+    var storedCookie=new Cookies();
+    console.log('@@@@===> : '+storedCookie.get('res'));
+  }
   dofunct=()=>{
+    this.checkCookie();
     fetch('https://first-react-server-rs.herokuapp.com/get-user-data')
       .then((res)=>{
         return res.json();
