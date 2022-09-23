@@ -21,7 +21,10 @@ class App extends Component{
           console.log(error);
         });
       },[]);*/
-connectedCallback() {
+  dofunct=()=>{
+    alert('clicked me');
+  }
+  render (){
     fetch('https://first-react-server-rs.herokuapp.com/my-custom-domain')
       .then((res)=>{
         console.log('response : '+JSON.stringify(res));
@@ -34,11 +37,6 @@ connectedCallback() {
         }).catch((error)=>{
           console.log(error);
         });
-  }
-  dofunct=()=>{
-    alert('clicked me');
-  }
-  render (){
     return(
     <div className="App slds-card">
       <header className="App-header">
