@@ -8,7 +8,7 @@ import {Button } from '@salesforce/design-system-react';
 class App extends Component{
   dataval;
   dofunct=()=>{
-    alert('clicked me');
+    alert(this.dataval);
   }
   
   render (){
