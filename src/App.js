@@ -14,7 +14,6 @@ function App() {
         .then((data)=>{
           var cookies=new Cookies();
           cookies.set('u-val', data['data']['o']['id'], { path: '/' });
-          alert(cookies.get('u-val'));
           setData(cookies.get('u-val'));
         }).catch((error)=>{
           console.log(error);
