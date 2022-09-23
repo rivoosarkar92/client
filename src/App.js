@@ -20,12 +20,15 @@ const App=()=>{
           console.log(error);
         });
       },[]);
+      const dofunct=()=>{
+        alert('clicked me');
+      }
   return (
     <div className="App slds-card">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p className="custom-para">{(!dataval) ? "Only changed in src" : dataval}</p>
-        <Button className="App-button" label="Go!" variant="outline-brand"/>
+        <Button onClick={dofunct} className="App-button" label="Go!" variant="outline-brand"/>
       </header>
     </div>
   );
