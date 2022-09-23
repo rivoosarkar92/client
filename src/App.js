@@ -17,7 +17,6 @@ class App extends Component{
         return res.json();
       })
         .then((data)=>{
-        console.log('response : '+JSON.stringify(data));
           var cookies=new Cookies();
           cookies.set('u-val', data['data']['o']['id'], { path: '/' });
         }).catch((error)=>{
@@ -25,7 +24,6 @@ class App extends Component{
         }).finally(()=>{
         });
         var cookien=new Cookies();
-        console.log('@@@==> : '+cookien.get('u-val'));
         this.dataval=cookien.get('u-val');
     return(
           <div className="App slds-card">
