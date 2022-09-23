@@ -2,7 +2,7 @@ import React from 'react';
 import Cookies from 'universal-cookie';
 import logo from './drib_blink_bot.gif';
 import './App.css';
-import {Button } from '@salesforce/design-system-react';
+
 //import {GlobalNavigationBar, GlobalNavigationBarRegion,GlobalNavigationBarLink}  from '@salesforce/design-system-react/';
 function App() {
   const [dataval, setData] = React.useState(null);
@@ -24,7 +24,6 @@ function App() {
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p className="custom-para">{(!dataval) ? "Only changed in src" : dataval}</p>
-        <Button label="Go!" variant="outline-brand"/>
       </header>
     </div>
   );
