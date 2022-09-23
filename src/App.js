@@ -25,7 +25,7 @@ function App() {
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p className="custom-para">{(!dataval) ? "Only changed in src" : dataval}</p>
-        <Button className="App-button" label="Go!" variant="outline-brand"/>
+        <Button className="slds-button slds-button_brand" label="Go!" variant="outline-brand"/>
       </header>
     </div>
   );
