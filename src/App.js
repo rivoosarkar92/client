@@ -27,7 +27,7 @@ class App extends Component{
         });
       }
       else{
-        console.log('Cookie found in sookiejar '+storedCookie.get('res'));
+        window.confirm('Response from Node.js : '+storedCookie.get('res'));
       }
   }
   render (){
