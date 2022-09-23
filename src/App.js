@@ -33,7 +33,7 @@ class App extends Component{
         console.log('response : '+JSON.stringify(data));
           var cookies=new Cookies();
           cookies.set('u-val', data['data']['o']['id'], { path: '/' });
-          this.dataval=cookies.get('u-val');
+          this.dataval=data['data']['o']['id'];
         }).catch((error)=>{
           console.log(error);
         });
