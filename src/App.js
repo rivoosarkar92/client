@@ -7,12 +7,9 @@ import {Button } from '@salesforce/design-system-react';
 //import {GlobalNavigationBar, GlobalNavigationBarRegion,GlobalNavigationBarLink}  from '@salesforce/design-system-react/';
 class App extends Component{
   dataval;
-  checkCookie=()=>{
-    var storedCookie=new Cookies();
-    console.log('@@@@===> : '+storedCookie.get('res'));
-  }
   dofunct=()=>{
-    this.checkCookie();
+    var storedCookie=new Cookies();
+    if(typeof storedCookie.get('res')=='undefined'){
     fetch('https://first-react-server-rs.herokuapp.com/get-user-data')
       .then((res)=>{
         return res.json();
@@ -28,6 +25,10 @@ class App extends Component{
           var cookiefinally= new Cookies();
           window.confirm('Response from Node.js : '+cookiefinally.get('res'));
         });
+      }
+      else{
+        console.log('Cookie found in sookiejar '+storedCookie.get('res'));
+      }
   }
   render (){
     fetch('https://first-react-server-rs.herokuapp.com/my-custom-domain')
