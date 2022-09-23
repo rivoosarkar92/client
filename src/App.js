@@ -3,7 +3,7 @@ import Cookies from 'universal-cookie';
 import logo from './drib_blink_bot.gif';
 import './App.css';
 import {Button } from '@salesforce/design-system-react';
-import {GlobalNavigationBar}  from '@salesforce/design-system-react/components/global-navigation-bar';
+import {GlobalNavigationBar}  from '@salesforce/design-system-react/';
 
 function App() {
   const [dataval, setData] = React.useState(null);
@@ -23,7 +23,7 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <GlobalNavigationBar>
+        <GlobalNavigationBar displayName="here">
         </GlobalNavigationBar>
         <img src={logo} className="App-logo" alt="logo" />
         <p className="custom-para">{(!dataval) ? "Only changed in src" : dataval}</p>
