@@ -24,6 +24,7 @@ class App extends Component{
 connectedCallback() {
     fetch('https://first-react-server-rs.herokuapp.com/my-custom-domain')
       .then((res)=>{
+        console.log('response : '+JSON.stringify(res));
         return res.json();
       })
         .then((data)=>{
