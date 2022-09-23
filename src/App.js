@@ -3,9 +3,10 @@ import Cookies from 'universal-cookie';
 import logo from './drib_blink_bot.gif';
 import './App.css';
 import {Button } from '@salesforce/design-system-react';
+import Component from '@salesforce/design-system-react/components/accordion';
 
 //import {GlobalNavigationBar, GlobalNavigationBarRegion,GlobalNavigationBarLink}  from '@salesforce/design-system-react/';
-function App() {
+const App=()=>{
   const [dataval, setData] = React.useState(null);
   React.useEffect(()=>{
     fetch('https://first-react-server-rs.herokuapp.com/my-custom-domain')
