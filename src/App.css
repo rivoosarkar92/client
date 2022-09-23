@@ -16,12 +16,12 @@
 }
 */
 .App-button {
-  width: 40%;
+  width: 50%;
   height :5vh;
   color:white;
   background-color: rgb(10, 98, 114);
   border: none!important;
-  border-radius: 5%;
+  border-radius: 2%;
 }
 .App-header {
   background-color: white;
