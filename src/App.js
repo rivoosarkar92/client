@@ -3,7 +3,6 @@ import Cookies from 'universal-cookie';
 import logo from './drib_blink_bot.gif';
 import './App.css';
 import {Button } from '@salesforce/design-system-react';
-import Component from '@salesforce/design-system-react/components/accordion';
 
 //import {GlobalNavigationBar, GlobalNavigationBarRegion,GlobalNavigationBarLink}  from '@salesforce/design-system-react/';
 const App=()=>{
