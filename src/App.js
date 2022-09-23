@@ -2,7 +2,7 @@ import React from 'react';
 import Cookies from 'universal-cookie';
 import logo from './drib_blink_bot.gif';
 import './App.css';
-import {Button , GlobalNavigationBar,GlobalNavigationBarRegion} from '@salesforce/design-system-react';
+import {Button , GlobalNavigationBar} from '@salesforce/design-system-react';
 
 function App() {
   const [dataval, setData] = React.useState(null);
