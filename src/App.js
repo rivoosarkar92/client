@@ -20,7 +20,7 @@ class App extends Component{
           console.log('Error from button : '+err);
         }).finally(()=>{
           var cookiefinally= new Cookies();
-          window.confirm(cookiefinally.get('res'));
+          window.confirm('Response from Node.js : '+cookiefinally.get('res'));
         });
   }
   render (){
