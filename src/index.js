@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import {Button } from '@salesforce/design-system-react';
+
 function Eello(props){
   console.log('@@@==> PROPS : '+props);
   return (
@@ -28,7 +28,6 @@ root.render(
     <center>
       <Eello/>
         <App />
-        <Button label="Go!" variant="outline-brand"/>
       </center>
   </React.StrictMode>
 );
