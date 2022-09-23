@@ -21,7 +21,7 @@ function App() {
         });
       },[]);
   return (
-    <div className="App">
+    <div className="App slds-card">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p className="custom-para">{(!dataval) ? "Only changed in src" : dataval}</p>
