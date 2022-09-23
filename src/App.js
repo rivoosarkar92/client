@@ -23,10 +23,9 @@ function App() {
   return (
     <div className="App slds-card">
       <header className="App-header">
-      <link rel="stylesheet" type="text/css" href="./styles/salesforce-lightning-design-system.min.css" />
         <img src={logo} className="App-logo" alt="logo" />
         <p className="custom-para">{(!dataval) ? "Only changed in src" : dataval}</p>
-        <Button className="slds-button slds-button_brand" label="Go!" variant="outline-brand"/>
+        <Button className="App-button" label="Go!" variant="outline-brand"/>
       </header>
     </div>
   );
