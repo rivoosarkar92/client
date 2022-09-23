@@ -12,11 +12,11 @@ function Eello(props){
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <Eello/>
-    <App />
     <center>
-    <Button label="Go!" variant="outline-brand"/>
-    </center>
+      <Eello/>
+        <App />
+        <Button label="Go!" variant="outline-brand"/>
+      </center>
   </React.StrictMode>
 );
 
