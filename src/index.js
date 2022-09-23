@@ -5,6 +5,7 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import {Button } from '@salesforce/design-system-react';
 function Eello(props){
+  console.log('@@@==> PROPS : '+props);
   return <h1>Hi</h1>
 }
 
