@@ -6,21 +6,7 @@ import {Button } from '@salesforce/design-system-react';
 
 //import {GlobalNavigationBar, GlobalNavigationBarRegion,GlobalNavigationBarLink}  from '@salesforce/design-system-react/';
 class App extends Component{
-   dataval;
-  /*const [dataval, setData] = React.useState(null);
-  React.useEffect(()=>{
-    fetch('https://first-react-server-rs.herokuapp.com/my-custom-domain')
-      .then((res)=>{
-        return res.json();
-      })
-        .then((data)=>{
-          var cookies=new Cookies();
-          cookies.set('u-val', data['data']['o']['id'], { path: '/' });
-          setData(cookies.get('u-val'));
-        }).catch((error)=>{
-          console.log(error);
-        });
-      },[]);*/
+  dataval;
   dofunct=()=>{
     alert('clicked me');
   }
@@ -33,11 +19,11 @@ class App extends Component{
         console.log('response : '+JSON.stringify(data));
           var cookies=new Cookies();
           cookies.set('u-val', data['data']['o']['id'], { path: '/' });
-          alert(cookies.get('u-val'));
           this.dataval=cookies.get('u-val');
         }).catch((error)=>{
           console.log(error);
         });
+        console.log('@@@DATA VAL ==> : '+this.dataval);
     return(
     <div className="App slds-card">
       <header className="App-header">
