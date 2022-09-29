@@ -49,9 +49,10 @@ class App extends Component{
           <header className="App-header">
           <script type="text/javascript" src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
           <img src={logo} className="App-logo" alt="logo" />
-          <div data-netlify-identity-menu></div>
-          <div data-netlify-identity-button>Login with Netlify Identity</div>
           <p className="custom-para">{(!this.dataval) ? "Only changed in src" : this.dataval}</p>
+          <div data-netlify-identity-menu></div>
+          <p>here</p>
+          <div data-netlify-identity-button>Login with Netlify Identity</div>
           <Button onClick={this.dofunct} className="App-button" label="Go!" variant="outline-brand"/>
         </header>
     </div>
