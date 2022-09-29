@@ -21,12 +21,27 @@ function Eello(props){
         </div>
     );
 }
+function Hi(){
+  return(
+    <html>
+<head>
+  <title>A static website</title>
+  <script type="text/javascript" src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+</head>
+<body>
+  <div data-netlify-identity-menu></div>
 
+  <div data-netlify-identity-button>Login with Netlify Identity</div>
+</body>
+</html>
+  );
+}
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <center>
       <Eello/>
+      <Hi/>
         <App />
       </center>
   </React.StrictMode>
