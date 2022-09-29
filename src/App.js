@@ -47,6 +47,7 @@ class App extends Component{
     return(
           <div className="App slds-card">
           <header className="App-header">
+          <script type="text/javascript" src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
           <img src={logo} className="App-logo" alt="logo" />
           <p className="custom-para">{(!this.dataval) ? "Only changed in src" : this.dataval}</p>
           <Button onClick={this.dofunct} className="App-button" label="Go!" variant="outline-brand"/>
