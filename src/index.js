@@ -29,7 +29,7 @@ function Hi(){
   <script type="text/javascript" src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
   <script>
   netlifyIdentity.on('init', function(){
-    netlifyIdentity.Open()
+    Open()
   });
   </script>
 </head>
