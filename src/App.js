@@ -48,6 +48,7 @@ class App extends Component{
           <div className="App slds-card">
           <header className="App-header">
           <script type="text/javascript" src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+          <script>netlifyIdentity.open('login');</script>
           <img src={logo} className="App-logo" alt="logo" />
           <p className="custom-para">{(!this.dataval) ? "Only changed in src" : this.dataval}</p>
           <div data-netlify-identity-menu></div>

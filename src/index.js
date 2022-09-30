@@ -29,10 +29,7 @@ function Hi(){
   <script type="text/javascript" src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
   <script>
     function opennetleafy(){
-      netlifyIdentity.init({
-        container: '#netlify-modal', // defaults to document.body
-        locale: 'en' // defaults to 'en'
-      })
+      console.log()
     }
     opennetleafy();
   </script>
