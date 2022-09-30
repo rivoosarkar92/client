@@ -28,7 +28,9 @@ function Hi(){
   <title>A static website</title>
   <script type="text/javascript" src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
   <script>
-    console.log(JSON.stringify('Hi'));
+  netlifyIdentity.on('init', function(){
+    console.log('inited ')
+  });
   </script>
 </head>
 <body>
