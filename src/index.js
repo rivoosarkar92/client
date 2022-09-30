@@ -34,7 +34,7 @@ function Hi(){
 <body>
   <div data-netlify-identity-menu></div>
   <div data-netlify-identity-button>Login with Netlify Identity</div>
-  <button onClick={netlifyIdentity.open()}>Open</button>
+  <button>Open</button>
 </body>
 </html>
   );
