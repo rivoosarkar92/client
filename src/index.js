@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import netlifyIdentity from 'netlify-identity-widget';
 
 function Eello(props){
   //console.log('@@@==> PROPS : '+JSON.stringify(props));
@@ -21,9 +22,6 @@ function Eello(props){
         </div>
     );
 }
-function open(){
-  Window.netlifyIdentity.open();
-}
 function Hi(){
   return(
     <html>
@@ -37,7 +35,7 @@ function Hi(){
 <body>
   <div data-netlify-identity-menu></div>
   <div data-netlify-identity-button>Login with Netlify Identity</div>
-  <button onClick={open}>Open</button>
+  <button onClick={netlifyIdentity.open()}>Open</button>
 </body>
 </html>
   );
@@ -45,6 +43,7 @@ function Hi(){
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
+    <netlifyIdentity></netlifyIdentity>
     <center>
       <Eello/>
       <Hi/>
