@@ -28,7 +28,13 @@ function Hi(){
   <title>A static website</title>
   <script type="text/javascript" src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
   <script>
-  netlifyIdentity.init();
+    function opennetleafy(){
+      netlifyIdentity.init({
+        container: '#netlify-modal', // defaults to document.body
+        locale: 'en' // defaults to 'en'
+      })
+    }
+    opennetleafy();
   </script>
 </head>
 <body>
