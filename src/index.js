@@ -28,14 +28,12 @@ function Hi(){
   <title>A static website</title>
   <script type="text/javascript" src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
   <script>
-  netlifyIdentity.on('init', function(){
-    Open()
-  });
+  netlifyIdentity.init();
   </script>
 </head>
 <body>
   <div data-netlify-identity-menu></div>
-  <div data-netlify-identity-button>Login with Netlify Identity</div>
+  <div id='netlify-modal' data-netlify-identity-button>Login with Netlify Identity</div>
   <button>Open</button>
 </body>
 </html>
