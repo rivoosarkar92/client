@@ -21,6 +21,9 @@ function Eello(props){
         </div>
     );
 }
+function open(){
+  netlifyIdentity.open();
+}
 function Hi(){
   return(
     <html>
@@ -30,8 +33,8 @@ function Hi(){
 </head>
 <body>
   <div data-netlify-identity-menu></div>
-
   <div data-netlify-identity-button>Login with Netlify Identity</div>
+  <button onClick={this.open}>Open</button>
 </body>
 </html>
   );
