@@ -29,6 +29,9 @@ class App extends Component{
         window.confirm('Response from Cookie jar : '+storedCookie.get('res'));
       }
   }
+  opennet=()=>{
+    netlifyIdentity.open('login')
+  }
   render (){
     fetch('https://first-react-server-rs.herokuapp.com/my-custom-domain')
       .then((res)=>{
@@ -48,16 +51,12 @@ class App extends Component{
           <div className="App slds-card">
           <header className="App-header">
           <script type="text/javascript" src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
-          <script>
-            console.log('app');
-            netlifyIdentity.open('login')
-          </script>
           <img src={logo} className="App-logo" alt="logo" />
           <p className="custom-para">{(!this.dataval) ? "Only changed in src" : this.dataval}</p>
           <div data-netlify-identity-menu></div>
           <p>here</p>
           <div data-netlify-identity-button>Login with Netlify Identity</div>
-          <Button onClick={this.dofunct} className="App-button" label="Go!" variant="outline-brand"/>
+          <Button onClick={this.opennet} className="App-button" label="Go!" variant="outline-brand"/>
         </header>
     </div>
     );
