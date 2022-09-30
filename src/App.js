@@ -30,7 +30,7 @@ class App extends Component{
       }
   }
   opennet=()=>{
-    netlifyIdentity.open('login')
+    window.netlifyIdentity.open('login');
   }
   render (){
     fetch('https://first-react-server-rs.herokuapp.com/my-custom-domain')
