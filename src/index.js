@@ -22,7 +22,7 @@ function Eello(props){
     );
 }
 function open(){
-  window.netlifyIdentity.open();
+  netlifyIdentity.open();
 }
 function Hi(){
   return(
