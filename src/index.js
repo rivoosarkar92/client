@@ -22,7 +22,7 @@ function Eello(props){
     );
 }
 function open(){
-  netlifyIdentity.open();
+  Window.netlifyIdentity.open();
 }
 function Hi(){
   return(
@@ -30,6 +30,9 @@ function Hi(){
 <head>
   <title>A static website</title>
   <script type="text/javascript" src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+  <script>
+    console.log(JSON.stringify(Window.netlifyIdentity));
+  </script>
 </head>
 <body>
   <div data-netlify-identity-menu></div>
