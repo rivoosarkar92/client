@@ -6,6 +6,17 @@ import {Button } from '@salesforce/design-system-react';
 
 //import {GlobalNavigationBar, GlobalNavigationBarRegion,GlobalNavigationBarLink}  from '@salesforce/design-system-react/';
 class App extends Component{
+  state = {user: null};
+  componentDidMount() {
+    const user = localStorage.getItem("currentOpenSaucedUser");
+    if (user) {
+      this.setState({user: JSON.parse(user)});
+    } else {
+      loginUser();
+    }
+    netlifyIdentity.on("login", (user) => this.setState({user}, loginUser()));
+    netlifyIdentity.on("logout", (user) => this.setState({user: null}, logoutUser()));
+  }
   dataval;
   dofunct=()=>{
     var storedCookie=new Cookies();
@@ -29,10 +40,15 @@ class App extends Component{
         window.confirm('Response from Cookie jar : '+storedCookie.get('res'));
       }
   }
-  opennet=()=>{
-    window.netlifyIdentity.open('login');
+  handleLogIn = () => {
+    netlifyIdentity.open();
+  }
+
+  handleLogOut = () => {
+    netlifyIdentity.logout();
   }
   render (){
+    const {user} = this.state;
     fetch('https://first-react-server-rs.herokuapp.com/my-custom-domain')
       .then((res)=>{
         return res.json();
@@ -50,13 +66,9 @@ class App extends Component{
     return(
           <div className="App slds-card">
           <header className="App-header">
-          <script type="text/javascript" src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
           <img src={logo} className="App-logo" alt="logo" />
           <p className="custom-para">{(!this.dataval) ? "Only changed in src" : this.dataval}</p>
-          <div data-netlify-identity-menu></div>
-          <p>here</p>
-          <div data-netlify-identity-button>Login with Netlify Identity</div>
-          <Button onClick={this.opennet} className="App-button" label="Go!" variant="outline-brand"/>
+          <Button onClick={this.dofunct} className="App-button" label="Go!" variant="outline-brand"/>
         </header>
     </div>
     );
